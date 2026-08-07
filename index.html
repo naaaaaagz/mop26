@@ -139,7 +139,36 @@
         <div class="contact-inner">
           <h2 id="contact-title">Contact Me</h2>
           <p><strong>50+ clients</strong> already did and they&rsquo;re glad they did so.</p>
-          <a class="email-link" href="mailto:dh@musiconpurpose.net">dh@musiconpurpose.net</a>
+          <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+            <input type="hidden" name="access_key" value="71f46a86-93c3-4611-af0b-baf8e0d2073a">
+            <input type="hidden" name="subject" value="New message from MusicOnPurpose">
+            <input type="hidden" name="from_name" value="MusicOnPurpose">
+            <input class="botcheck" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off">
+
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" autocomplete="name" required>
+            </label>
+
+            <label>
+              <span>Email address</span>
+              <input type="email" name="email" autocomplete="email" required>
+            </label>
+
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="6" required></textarea>
+            </label>
+
+            <label class="contact-check">
+              <span id="contact-check-label">Quick check</span>
+              <input type="text" name="quick_check" inputmode="numeric" autocomplete="off" required>
+            </label>
+
+            <button class="contact-submit" type="submit">Send Message</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+          <p class="email-fallback">or write directly to <a href="mailto:dh@musiconpurpose.net">dh@musiconpurpose.net</a></p>
           <p class="copyright">&copy; MusicOnPurpose</p>
         </div>
       </section>

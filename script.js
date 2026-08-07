@@ -5,6 +5,7 @@ const heroBg = document.querySelector("[data-d]");
 const scrollCue = document.querySelector(".scroll-down");
 const backToTop = document.querySelector("[data-h]");
 const players = Array.from(document.querySelectorAll("[data-e]"));
+const contactForm = document.querySelector("#contact-form");
 
 function syncHeader() {
   header.classList.toggle("is-scrolled", window.scrollY > 8);
@@ -90,3 +91,75 @@ players.forEach((player) => {
     setPlaying(player, false);
   });
 });
+
+if (contactForm) {
+  const checkLabel = contactForm.querySelector("#contact-check-label");
+  const checkInput = contactForm.querySelector('input[name="quick_check"]');
+  const submitButton = contactForm.querySelector('button[type="submit"]');
+  const status = contactForm.querySelector(".form-status");
+  const originalButtonText = submitButton.textContent;
+  let checkAnswer = "";
+
+  function makeCheck() {
+    const left = Math.floor(Math.random() * 7) + 2;
+    const right = Math.floor(Math.random() * 8) + 1;
+    checkAnswer = String(left + right);
+    checkLabel.textContent = `${left} + ${right} =`;
+    checkInput.value = "";
+  }
+
+  function setStatus(message, type) {
+    status.textContent = message;
+    status.className = `form-status ${type ? `is-${type}` : ""}`.trim();
+  }
+
+  makeCheck();
+
+  contactForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    setStatus("", "");
+
+    if (!contactForm.checkValidity()) {
+      contactForm.reportValidity();
+      return;
+    }
+
+    if (checkInput.value.trim() !== checkAnswer) {
+      setStatus("Please answer the quick check correctly.", "error");
+      makeCheck();
+      checkInput.focus();
+      return;
+    }
+
+    const formData = new FormData(contactForm);
+    formData.delete("quick_check");
+    formData.append("replyto", formData.get("email"));
+
+    submitButton.textContent = "Sending...";
+    submitButton.disabled = true;
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json"
+        }
+      });
+      const data = await response.json();
+
+      if (!response.ok || !data.success) {
+        throw new Error(data.message || "The message could not be sent.");
+      }
+
+      contactForm.reset();
+      makeCheck();
+      setStatus("Message sent successfully.", "success");
+    } catch (error) {
+      setStatus(error.message || "Something went wrong. Please try again.", "error");
+    } finally {
+      submitButton.textContent = originalButtonText;
+      submitButton.disabled = false;
+    }
+  });
+}

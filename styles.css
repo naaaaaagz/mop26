@@ -576,27 +576,115 @@ button {
   color: #111;
 }
 
-.email-link {
-  display: block;
-  width: 100%;
-  margin: 5px 0 0;
-  padding: 15px;
-  border: 1px double var(--purple);
-  border-radius: 5px;
-  color: var(--purple);
-  background: transparent;
-  font-family: "Dosis", Arial, sans-serif;
-  font-size: 50px;
-  font-weight: 700;
-  line-height: 1.2;
-  overflow-wrap: anywhere;
-  transition: background 160ms ease, color 160ms ease;
+.contact-form {
+  display: grid;
+  gap: 16px;
+  margin: 8px auto 0;
+  text-align: left;
 }
 
-.email-link:hover,
-.email-link:focus-visible {
+.contact-form label {
+  display: grid;
+  gap: 7px;
+  color: #151515;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid rgba(77, 0, 207, 0.34);
+  border-radius: 5px;
+  padding: 13px 14px;
+  color: #111;
+  background: #fff;
+  font: 400 18px/1.35 "Raleway", Arial, sans-serif;
+  outline: none;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.contact-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--purple);
+  box-shadow: 0 0 0 3px rgba(77, 0, 207, 0.12);
+}
+
+.contact-check {
+  max-width: 170px;
+}
+
+.contact-submit {
+  justify-self: center;
+  min-width: 210px;
+  margin-top: 4px;
+  padding: 14px 24px;
+  border: 1px solid var(--purple);
+  border-radius: 5px;
   color: var(--white);
   background: var(--purple);
+  font-family: "Dosis", Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.1;
+  cursor: pointer;
+  transition: background 160ms ease, color 160ms ease, opacity 160ms ease;
+}
+
+.contact-submit:hover,
+.contact-submit:focus-visible {
+  color: var(--purple);
+  background: var(--white);
+}
+
+.contact-submit:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+.botcheck {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+}
+
+.form-status {
+  min-height: 25px;
+  margin: 0 !important;
+  text-align: center;
+  font-size: 17px !important;
+  font-weight: 700;
+}
+
+.form-status.is-success {
+  color: #167a35 !important;
+}
+
+.form-status.is-error {
+  color: #b00020 !important;
+}
+
+.email-fallback {
+  margin: 18px 0 0 !important;
+  color: #777 !important;
+  font-size: 16px !important;
+}
+
+.email-fallback a {
+  color: var(--purple);
+  font-weight: 700;
+}
+
+.email-fallback a:hover,
+.email-fallback a:focus-visible {
+  text-decoration: underline;
 }
 
 .copyright {
@@ -750,8 +838,13 @@ button {
     margin-bottom: 22px;
   }
 
-  .email-link {
-    font-size: 32px;
+  .contact-form {
+    gap: 14px;
+  }
+
+  .contact-submit {
+    width: 100%;
+    font-size: 28px;
   }
 }
 
@@ -762,7 +855,12 @@ button {
     font-size: 36px;
   }
 
-  .email-link {
-    font-size: 22px;
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 16px;
+  }
+
+  .contact-submit {
+    font-size: 25px;
   }
 }

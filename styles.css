@@ -693,6 +693,20 @@ button {
   font-size: 13px !important;
 }
 
+.copyright a {
+  color: rgba(77, 0, 207, 0.38);
+  text-decoration-color: rgba(77, 0, 207, 0.18);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 160ms ease, text-decoration-color 160ms ease;
+}
+
+.copyright a:hover,
+.copyright a:focus-visible {
+  color: rgba(77, 0, 207, 0.82);
+  text-decoration-color: rgba(77, 0, 207, 0.58);
+}
+
 @keyframes sc-down-a {
   0% {
     transform: translateY(0) rotate(45deg);

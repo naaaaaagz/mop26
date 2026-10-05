@@ -92,6 +92,49 @@ players.forEach((player) => {
   });
 });
 
+const videoDialog = document.querySelector(".video-dialog");
+const videoTitle = document.querySelector("#video-dialog-title");
+const videoPlayer = document.querySelector(".video-dialog-player");
+let activeVideoThumbnail = null;
+
+document.querySelectorAll("[data-video-id]").forEach((thumbnail) => {
+  thumbnail.addEventListener("click", () => {
+    stopOtherPlayers();
+    activeVideoThumbnail = thumbnail;
+    videoTitle.textContent = thumbnail.dataset.videoTitle;
+
+    const iframe = document.createElement("iframe");
+    iframe.src = `https://www.youtube.com/embed/${thumbnail.dataset.videoId}?autoplay=0&playsinline=1`;
+    iframe.title = thumbnail.dataset.videoTitle;
+    iframe.allow = "encrypted-media; fullscreen; picture-in-picture";
+    iframe.allowFullscreen = true;
+    iframe.referrerPolicy = "strict-origin-when-cross-origin";
+    videoPlayer.replaceChildren(iframe);
+    videoDialog.showModal();
+    document.body.classList.add("video-modal-open");
+  });
+});
+
+videoDialog.querySelector(".video-dialog-close").addEventListener("click", () => {
+  videoDialog.close();
+});
+
+videoDialog.addEventListener("click", (event) => {
+  const bounds = videoDialog.getBoundingClientRect();
+  if (event.target === videoDialog && (
+    event.clientX < bounds.left || event.clientX > bounds.right ||
+    event.clientY < bounds.top || event.clientY > bounds.bottom
+  )) {
+    videoDialog.close();
+  }
+});
+
+videoDialog.addEventListener("close", () => {
+  videoPlayer.replaceChildren();
+  document.body.classList.remove("video-modal-open");
+  activeVideoThumbnail?.focus({ preventScroll: true });
+});
+
 if (contactForm) {
   const checkLabel = contactForm.querySelector("#contact-check-label");
   const checkInput = contactForm.querySelector('input[name="quick_check"]');

@@ -504,6 +504,124 @@ button {
   line-height: 1.6;
 }
 
+.video-examples {
+  background: #000;
+  color: var(--white);
+  text-align: center;
+}
+
+.video-examples h2 {
+  margin: 0 0 30px;
+  font-family: "Dosis", Arial, sans-serif;
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  width: min(var(--container), calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.video-thumbnail {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  padding: 0;
+  border: 0;
+  background: #181818;
+  cursor: pointer;
+  transition: opacity 160ms ease;
+}
+
+.video-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-thumbnail:hover {
+  opacity: 0.8;
+}
+
+.video-thumbnail:focus-visible,
+.video-dialog-close:focus-visible {
+  outline: 2px solid var(--purple-bright);
+  outline-offset: 4px;
+}
+
+body.video-modal-open {
+  overflow: hidden;
+}
+
+.video-dialog {
+  width: min(1000px, calc(100% - 32px), calc((100dvh - 160px) * 16 / 9));
+  max-width: none;
+  max-height: calc(100dvh - 32px);
+  padding: 0;
+  border: 0;
+  background: #000;
+  color: var(--white);
+}
+
+.video-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.video-dialog-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px;
+}
+
+.video-dialog-header h2 {
+  flex: 1;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.video-dialog-close {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--white);
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.video-dialog-player {
+  aspect-ratio: 16 / 9;
+}
+
+.video-dialog-player iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 767px) {
+  .video-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .services {
   background-color: var(--white);
   background-image: url("img/1hipmodpngmin.png");

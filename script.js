@@ -6,6 +6,7 @@ const scrollCue = document.querySelector(".scroll-down");
 const backToTop = document.querySelector("[data-h]");
 const players = Array.from(document.querySelectorAll("[data-e]"));
 const contactForm = document.querySelector("#contact-form");
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 function syncHeader() {
   header.classList.toggle("is-scrolled", window.scrollY > 8);
@@ -13,18 +14,26 @@ function syncHeader() {
   backToTop.classList.toggle("is-visible", window.scrollY > window.innerHeight * 0.7);
 
   if (heroBg) {
-    heroBg.style.transform = `translate3d(0, ${window.scrollY * 0.78}px, 0)`;
+    heroBg.style.transform = reducedMotion.matches
+      ? "none"
+      : `translate3d(0, ${window.scrollY * 0.78}px, 0)`;
   }
 }
 
+function setMenuOpen(isOpen) {
+  header.classList.toggle("is-open", isOpen);
+  navToggle.setAttribute("aria-expanded", String(isOpen));
+  navToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+}
+
 function closeMenu() {
-  header.classList.remove("is-open");
-  navToggle.setAttribute("aria-expanded", "false");
+  setMenuOpen(false);
 }
 
 function setPlaying(player, isPlaying) {
   const playButton = player.querySelector("[data-f]");
-  const title = player.querySelector("h3").textContent.toLowerCase();
+  playButton.dataset.title ||= playButton.getAttribute("aria-label").replace(/^Play /, "");
+  const title = playButton.dataset.title;
   player.classList.toggle("is-playing", isPlaying);
   playButton.setAttribute("aria-label", `${isPlaying ? "Pause" : "Play"} ${title}`);
 }
@@ -39,8 +48,7 @@ function stopOtherPlayers(currentPlayer) {
 }
 
 navToggle.addEventListener("click", () => {
-  const isOpen = header.classList.toggle("is-open");
-  navToggle.setAttribute("aria-expanded", String(isOpen));
+  setMenuOpen(!header.classList.contains("is-open"));
 });
 
 nav.addEventListener("click", (event) => {
@@ -63,7 +71,7 @@ players.forEach((player) => {
   button.addEventListener("click", () => {
     if (audio.paused) {
       stopOtherPlayers(player);
-      audio.play();
+      audio.play().catch(() => {});
     } else {
       audio.pause();
     }
@@ -104,9 +112,9 @@ document.querySelectorAll("[data-video-id]").forEach((thumbnail) => {
     videoTitle.textContent = thumbnail.dataset.videoTitle;
 
     const iframe = document.createElement("iframe");
-    iframe.src = `https://www.youtube.com/embed/${thumbnail.dataset.videoId}?autoplay=0&playsinline=1`;
+    iframe.src = `https://www.youtube-nocookie.com/embed/${thumbnail.dataset.videoId}?autoplay=1&playsinline=1`;
     iframe.title = thumbnail.dataset.videoTitle;
-    iframe.allow = "encrypted-media; fullscreen; picture-in-picture";
+    iframe.allow = "autoplay; encrypted-media; fullscreen; picture-in-picture";
     iframe.allowFullscreen = true;
     iframe.referrerPolicy = "strict-origin-when-cross-origin";
     videoPlayer.replaceChildren(iframe);

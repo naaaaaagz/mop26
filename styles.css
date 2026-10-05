@@ -1,3 +1,131 @@
+/* Self-hosted fonts (Fontsource builds of Google Fonts, SIL Open Font License) */
+
+@font-face {
+  font-family: "Dosis";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/dosis-latin-ext-400-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Dosis";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/dosis-latin-400-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+@font-face {
+  font-family: "Dosis";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/dosis-latin-ext-700-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Dosis";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/dosis-latin-700-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("fonts/raleway-latin-ext-300-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("fonts/raleway-latin-300-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/raleway-latin-ext-400-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/raleway-latin-400-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/raleway-latin-ext-600-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/raleway-latin-600-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/raleway-latin-ext-700-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/raleway-latin-700-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+@font-face {
+  font-family: "Urbanist";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/urbanist-latin-ext-700-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Urbanist";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/urbanist-latin-700-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
 :root {
   --purple: #4d00cf;
   --purple-bright: #8b3ff3;
@@ -16,6 +144,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 60px;
 }
 
 body {
@@ -195,6 +324,7 @@ button {
 .hero {
   position: relative;
   min-height: 100vh;
+  min-height: 100svh;
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -283,7 +413,7 @@ button {
   bottom: 35px;
   width: 30px;
   height: 30px;
-  animation: sc-down-a 0.3s infinite alternate;
+  animation: sc-down-a 1.2s ease-in-out infinite alternate;
 }
 
 .back-to-top {
@@ -293,6 +423,9 @@ button {
   bottom: 20px;
   width: 46px;
   height: 46px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   opacity: 0;
   pointer-events: none;
   transition: opacity 180ms ease;
@@ -306,18 +439,14 @@ button {
 .back-to-top::before {
   content: "";
   position: absolute;
-  left: 13px;
-  top: 17px;
-  width: 20px;
-  height: 20px;
-  border-top: 7px solid rgba(0, 0, 0, 0.23);
-  border-left: 7px solid rgba(0, 0, 0, 0.23);
+  left: 15px;
+  top: 18px;
+  width: 16px;
+  height: 16px;
+  border-top: 5px solid rgba(0, 0, 0, 0.55);
+  border-left: 5px solid rgba(0, 0, 0, 0.55);
   border-radius: 4px 0 0 0;
   transform: rotate(45deg);
-}
-
-.back-to-top::after {
-  content: none;
 }
 
 .section {
@@ -326,7 +455,7 @@ button {
 
 .portfolio {
   background-color: var(--mist);
-  background-image: url("img/3funpngmin.png");
+  background-image: url("img/3fun.webp");
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -624,7 +753,7 @@ body.video-modal-open {
 
 .services {
   background-color: var(--white);
-  background-image: url("img/1hipmodpngmin.png");
+  background-image: url("img/1hipmod.webp");
   background-position: center top;
   background-size: cover;
   color: var(--white);
@@ -662,6 +791,7 @@ body.video-modal-open {
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.42;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45);
 }
 
 .contact {
@@ -678,7 +808,7 @@ body.video-modal-open {
   margin: 0 auto;
 }
 
-.contact p {
+.contact-lead {
   margin: 0 0 24px;
   color: var(--muted);
   font-size: 24px;
@@ -690,7 +820,7 @@ body.video-modal-open {
   font-size: 52px;
 }
 
-.contact p strong {
+.contact-lead strong {
   color: #111;
 }
 
@@ -775,45 +905,32 @@ body.video-modal-open {
 
 .form-status {
   min-height: 25px;
-  margin: 0 !important;
+  margin: 0;
   text-align: center;
-  font-size: 17px !important;
+  font-size: 17px;
   font-weight: 700;
 }
 
 .form-status.is-success {
-  color: #167a35 !important;
+  color: #167a35;
 }
 
 .form-status.is-error {
-  color: #b00020 !important;
+  color: #b00020;
 }
 
-.email-fallback {
-  margin: 18px 0 0 !important;
-  color: #777 !important;
-  font-size: 16px !important;
-}
-
-.email-fallback a {
-  color: var(--purple);
-  font-weight: 700;
-}
-
-.email-fallback a:hover,
-.email-fallback a:focus-visible {
-  text-decoration: underline;
-}
 
 .copyright {
-  margin-top: 36px !important;
-  color: #ccc !important;
-  font-size: 13px !important;
+  margin: 36px 0 0;
+  color: #777;
+  font-size: 13px;
+  line-height: 1.6;
 }
 
 .copyright a {
-  color: rgba(77, 0, 207, 0.38);
-  text-decoration-color: rgba(77, 0, 207, 0.18);
+  color: var(--purple);
+  text-decoration: underline;
+  text-decoration-color: rgba(77, 0, 207, 0.3);
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
   transition: color 160ms ease, text-decoration-color 160ms ease;
@@ -821,8 +938,8 @@ body.video-modal-open {
 
 .copyright a:hover,
 .copyright a:focus-visible {
-  color: rgba(77, 0, 207, 0.82);
-  text-decoration-color: rgba(77, 0, 207, 0.58);
+  color: var(--purple-bright);
+  text-decoration-color: currentColor;
 }
 
 @keyframes sc-down-a {
@@ -831,16 +948,11 @@ body.video-modal-open {
   }
 
   100% {
-    transform: translateY(2px) rotate(45deg);
+    transform: translateY(6px) rotate(45deg);
   }
 }
 
 @media (max-width: 1024px) {
-  .hero h1,
-  .hero p {
-    font-size: 56px;
-  }
-
   .portfolio {
     background-attachment: scroll;
   }
@@ -853,6 +965,18 @@ body.video-modal-open {
   .sample-art {
     min-height: 300px;
     height: 300px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 999px) {
+  .main-nav {
+    gap: 18px;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  .main-nav a {
+    white-space: nowrap;
   }
 }
 
@@ -953,7 +1077,6 @@ body.video-modal-open {
     max-width: 340px;
     font-size: 21px;
     line-height: 1.35;
-    text-shadow: 0 1px 4px rgba(190, 0, 70, 0.75);
   }
 
   .contact.section {
@@ -965,7 +1088,7 @@ body.video-modal-open {
     margin-bottom: 24px;
   }
 
-  .contact p {
+  .contact-lead {
     font-size: 22px;
     margin-bottom: 22px;
   }
@@ -994,5 +1117,38 @@ body.video-modal-open {
 
   .contact-submit {
     font-size: 25px;
+  }
+}
+
+.form-note {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.form-note a {
+  color: var(--purple);
+  text-decoration: underline;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .scroll-down::after {
+    animation: none;
+  }
+
+  .hero-bg {
+    will-change: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
   }
 }

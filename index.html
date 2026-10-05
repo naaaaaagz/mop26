@@ -14,12 +14,18 @@
     <link rel="icon" type="image/png" sizes="192x192" href="img/icon-192.png">
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
     <meta name="msapplication-TileImage" content="img/mop25col512.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;700&family=Raleway:wght@400;600;700&family=Urbanist:wght@600;700;800&display=swap"
-      rel="stylesheet"
-    >
+    <link rel="canonical" href="https://musiconpurpose.net/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="MusicOnPurpose">
+    <meta property="og:title" content="MusicOnPurpose - Custom music and sounds for your next project">
+    <meta property="og:description" content="Custom music, sound design, mixing, audio branding and voice-over (EN/HU).">
+    <meta property="og:url" content="https://musiconpurpose.net/">
+    <meta property="og:image" content="https://musiconpurpose.net/img/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preload" href="fonts/raleway-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/urbanist-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -181,7 +187,7 @@
       <section class="contact section" id="contact" aria-labelledby="contact-title">
         <div class="contact-inner">
           <h2 id="contact-title">Contact Me</h2>
-          <p><strong>50+ clients</strong> already did and they&rsquo;re glad they did so.</p>
+          <p class="contact-lead"><strong>50+ clients</strong> already have, and they&rsquo;re glad they did.</p>
           <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
             <input type="hidden" name="access_key" value="71f46a86-93c3-4611-af0b-baf8e0d2073a">
             <input type="hidden" name="subject" value="New message from MusicOnPurpose">
@@ -210,10 +216,12 @@
 
             <button class="contact-submit" type="submit">Send Message</button>
             <p class="form-status" role="status" aria-live="polite"></p>
+            <p class="form-note">Your message is delivered to me via Web3Forms. See the <a href="privacy.html">privacy note</a>.</p>
           </form>
           <p class="copyright">
             &copy; MusicOnPurpose // powered by
             <a href="https://nagz.space" target="_blank" rel="noopener noreferrer">nagz.space</a>
+            // <a href="privacy.html">Privacy</a>
           </p>
         </div>
       </section>

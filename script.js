@@ -112,7 +112,7 @@ document.querySelectorAll("[data-video-id]").forEach((thumbnail) => {
     videoTitle.textContent = thumbnail.dataset.videoTitle;
 
     const iframe = document.createElement("iframe");
-    iframe.src = `https://www.youtube-nocookie.com/embed/${thumbnail.dataset.videoId}?autoplay=1&playsinline=1`;
+    iframe.src = `https://www.youtube-nocookie.com/embed/${thumbnail.dataset.videoId}?playsinline=1`;
     iframe.title = thumbnail.dataset.videoTitle;
     iframe.allow = "autoplay; encrypted-media; fullscreen; picture-in-picture";
     iframe.allowFullscreen = true;
